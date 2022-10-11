@@ -9,10 +9,11 @@ on:
       - main
   schedule:
     - cron: '*/5 * * * *'
+  workflow_dispatch:  
 
 jobs:
   tests:
-    runs-on: [self-hosted, workflow_dispatch, ubuntu-latest]
+    runs-on: [self-hosted, ubuntu-latest]
     strategy:
       matrix:
         php-versions: ['7.4']
